@@ -19,5 +19,5 @@ def generate_payload():
     
     return random.choice(payloads)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     print(generate_payload())
