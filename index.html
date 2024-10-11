@@ -4,11 +4,11 @@
     <title>XSS Test Page</title>
 </head>
 <body>
-    <form method="GET">
+    <form method="POST">
         <label for="name">Enter your name:</label>
         <input type="text" id="name" name="name">
         <button type="submit">Submit</button>
     </form>
-    <p>Hello, <?php echo htmlspecialchars($_GET["name"]); ?></p>
+    <p>Hello, <?php echo isset($_POST["name"]) ? htmlspecialchars($_POST["name"]) : ''; ?></p>
 </body>
 </html>
