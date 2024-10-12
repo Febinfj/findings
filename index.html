@@ -9,6 +9,6 @@
         <input type="text" id="name" name="name">
         <button type="submit">Submit</button>
     </form>
-    <p>Hello, <?php echo isset($_POST["name"]) ? htmlspecialchars($_POST["name"]) : ''; ?></p>
+    <p>Hello, <?php echo isset($_POST["name"]) ? $_POST["name"] : ''; ?></p>
 </body>
 </html>
